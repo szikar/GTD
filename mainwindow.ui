@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>816</width>
+    <height>631</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>GTD by Linux</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ikonok.qrc">
+    <normaloff>:/icon/ico/mail-archive.svg</normaloff>:/icon/ico/mail-archive.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QFrame" name="horizontalFrame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>221</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QListView" name="listView">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::MultiSelection</enum>
+       </property>
+       <property name="viewMode">
+        <enum>QListView::ListMode</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="verticalFrame">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>591</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>569</width>
+          <height>489</height>
+         </rect>
+        </property>
+        <widget class="QTextEdit" name="textEdit">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>587</width>
+           <height>511</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+         <property name="textInteractionFlags">
+          <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>816</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFajl">
+    <property name="title">
+     <string>Fájl</string>
+    </property>
+    <addaction name="actionUj"/>
+    <addaction name="actionMentes"/>
+    <addaction name="actionMentes_maskent"/>
+    <addaction name="actionTorles"/>
+    <addaction name="separator"/>
+    <addaction name="actionKilepes"/>
+   </widget>
+   <widget class="QMenu" name="menuSzerkesztes">
+    <property name="title">
+     <string>Szerkesztés</string>
+    </property>
+    <addaction name="actionMasolas"/>
+    <addaction name="actionKivagas"/>
+    <addaction name="actionBeillesztes"/>
+   </widget>
+   <widget class="QMenu" name="menuSugo">
+    <property name="title">
+     <string>Súgó</string>
+    </property>
+    <addaction name="actionNevjegy"/>
+   </widget>
+   <addaction name="menuFajl"/>
+   <addaction name="menuSzerkesztes"/>
+   <addaction name="menuSugo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="Options">
+   <property name="windowTitle">
+    <string>Options</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionUj"/>
+   <addaction name="actionMentes"/>
+   <addaction name="actionMentes_maskent"/>
+   <addaction name="actionMasolas"/>
+   <addaction name="actionKivagas"/>
+   <addaction name="actionBeillesztes"/>
+   <addaction name="actionKilepes"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="actionKilepes">
+   <property name="icon">
+    <iconset resource="ikonok.qrc">
+     <normaloff>:/icon/ico/system-log-out.svg</normaloff>:/icon/ico/system-log-out.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Kilépés</string>
+   </property>
+  </action>
+  <action name="actionMasolas">
+   <property name="icon">
+    <iconset resource="ikonok.qrc">
+     <normaloff>:/icon/ico/edit-copy.svg</normaloff>:/icon/ico/edit-copy.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Másolás</string>
+   </property>
+  </action>
+  <action name="actionKivagas">
+   <property name="icon">
+    <iconset resource="ikonok.qrc">
+     <normaloff>:/icon/ico/edit-cut-3.ico</normaloff>:/icon/ico/edit-cut-3.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Kivágás</string>
+   </property>
+  </action>
+  <action name="actionBeillesztes">
+   <property name="icon">
+    <iconset resource="ikonok.qrc">
+     <normaloff>:/icon/ico/edit-paste-3.ico</normaloff>:/icon/ico/edit-paste-3.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Beillesztés</string>
+   </property>
+  </action>
+  <action name="actionNevjegy">
+   <property name="icon">
+    <iconset resource="ikonok.qrc">
+     <normaloff>:/icon/ico/help-about.svg</normaloff>:/icon/ico/help-about.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Névjegy</string>
+   </property>
+  </action>
+  <action name="actionUj">
+   <property name="icon">
+    <iconset resource="ikonok.qrc">
+     <normaloff>:/icon/ico/document-new.svg</normaloff>:/icon/ico/document-new.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Új</string>
+   </property>
+  </action>
+  <action name="actionMentes">
+   <property name="icon">
+    <iconset resource="ikonok.qrc">
+     <normaloff>:/icon/ico/document-save.svg</normaloff>:/icon/ico/document-save.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Mentés</string>
+   </property>
+  </action>
+  <action name="actionMentes_maskent">
+   <property name="icon">
+    <iconset resource="ikonok.qrc">
+     <normaloff>:/icon/ico/document-save-as.svg</normaloff>:/icon/ico/document-save-as.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Mentés másként</string>
+   </property>
+  </action>
+  <action name="actionTorles">
+   <property name="icon">
+    <iconset resource="ikonok.qrc">
+     <normaloff>:/icon/ico/edit-delete.svg</normaloff>:/icon/ico/edit-delete.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Törlés</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="ikonok.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionKilepes</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionMasolas</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>copy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>354</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionKivagas</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>cut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>354</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionBeillesztes</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>paste()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>354</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
