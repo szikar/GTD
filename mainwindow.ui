@@ -20,7 +20,7 @@
    <string>GTD by Linux</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="ikonok.qrc">
+   <iconset>
     <normaloff>:/icon/ico/mail-archive.svg</normaloff>:/icon/ico/mail-archive.svg</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
@@ -51,8 +51,11 @@
        <property name="horizontalScrollBarPolicy">
         <enum>Qt::ScrollBarAlwaysOff</enum>
        </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+       </property>
        <property name="selectionMode">
-        <enum>QAbstractItemView::MultiSelection</enum>
+        <enum>QAbstractItemView::SingleSelection</enum>
        </property>
        <property name="viewMode">
         <enum>QListView::ListMode</enum>
@@ -87,8 +90,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>569</width>
-          <height>489</height>
+          <width>573</width>
+          <height>493</height>
          </rect>
         </property>
         <widget class="QTextEdit" name="textEdit">
@@ -182,7 +185,7 @@
   </widget>
   <action name="actionKilepes">
    <property name="icon">
-    <iconset resource="ikonok.qrc">
+    <iconset>
      <normaloff>:/icon/ico/system-log-out.svg</normaloff>:/icon/ico/system-log-out.svg</iconset>
    </property>
    <property name="text">
@@ -191,7 +194,7 @@
   </action>
   <action name="actionMasolas">
    <property name="icon">
-    <iconset resource="ikonok.qrc">
+    <iconset>
      <normaloff>:/icon/ico/edit-copy.svg</normaloff>:/icon/ico/edit-copy.svg</iconset>
    </property>
    <property name="text">
@@ -200,7 +203,7 @@
   </action>
   <action name="actionKivagas">
    <property name="icon">
-    <iconset resource="ikonok.qrc">
+    <iconset>
      <normaloff>:/icon/ico/edit-cut-3.ico</normaloff>:/icon/ico/edit-cut-3.ico</iconset>
    </property>
    <property name="text">
@@ -209,7 +212,7 @@
   </action>
   <action name="actionBeillesztes">
    <property name="icon">
-    <iconset resource="ikonok.qrc">
+    <iconset>
      <normaloff>:/icon/ico/edit-paste-3.ico</normaloff>:/icon/ico/edit-paste-3.ico</iconset>
    </property>
    <property name="text">
@@ -218,7 +221,7 @@
   </action>
   <action name="actionNevjegy">
    <property name="icon">
-    <iconset resource="ikonok.qrc">
+    <iconset>
      <normaloff>:/icon/ico/help-about.svg</normaloff>:/icon/ico/help-about.svg</iconset>
    </property>
    <property name="text">
@@ -227,7 +230,7 @@
   </action>
   <action name="actionUj">
    <property name="icon">
-    <iconset resource="ikonok.qrc">
+    <iconset>
      <normaloff>:/icon/ico/document-new.svg</normaloff>:/icon/ico/document-new.svg</iconset>
    </property>
    <property name="text">
@@ -236,7 +239,7 @@
   </action>
   <action name="actionMentes">
    <property name="icon">
-    <iconset resource="ikonok.qrc">
+    <iconset>
      <normaloff>:/icon/ico/document-save.svg</normaloff>:/icon/ico/document-save.svg</iconset>
    </property>
    <property name="text">
@@ -245,7 +248,7 @@
   </action>
   <action name="actionMentes_maskent">
    <property name="icon">
-    <iconset resource="ikonok.qrc">
+    <iconset>
      <normaloff>:/icon/ico/document-save-as.svg</normaloff>:/icon/ico/document-save-as.svg</iconset>
    </property>
    <property name="text">
@@ -254,7 +257,7 @@
   </action>
   <action name="actionTorles">
    <property name="icon">
-    <iconset resource="ikonok.qrc">
+    <iconset>
      <normaloff>:/icon/ico/edit-delete.svg</normaloff>:/icon/ico/edit-delete.svg</iconset>
    </property>
    <property name="text">
