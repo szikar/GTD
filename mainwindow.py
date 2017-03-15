@@ -14,15 +14,15 @@ import db
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
-	def __init__(self, parent=None):
+	def __init__(self, parent=None, textboxtext=None):
 		super(MainWindow, self).__init__(parent)
 		self.setupUi(self)
 		db.dbConnect()
 		model = QSqlTableModel()
-		db.readTable(model)
+		db.readTable(model, textboxtext)
 		self.listView.setModel(model)
 		self.listView.setModelColumn(1)
-
+		self.textEdit.setText(textboxtext)
 	# TODO: A beállitás tábla második oszlopának a megfelelő mezőjét a textboxba beilleszteni
 
 	@pyqtSlot()
@@ -32,7 +32,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		                              "Biztosan ki akar lépni az programból?",
 		                              QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 		if result == QMessageBox.Yes:
-			# db.dbDisconnect()
+			db.dbClose()
 			self.close()
 
 	@pyqtSlot()

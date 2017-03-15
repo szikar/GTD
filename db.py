@@ -28,14 +28,20 @@ def dbConnect():
 
 
 # TODO: Az adatbázis disconnectet meg kell csinálni, ne maradjon nyitva
-# def dbDisconnect():
-#     db.close()
+def dbClose():
+	db = QSqlDatabase.addDatabase("QSQLITE")
+	if db.isOpen():
+		db.close()
 
-def readTable(model):
+def readTable(model, lekerdezes):
 	model.setTable('Bejegyzes')
 	model.setEditStrategy(QtSql.QSqlTableModel.OnRowChange)
 	model.select()
-	return model
+	query_object = QtSql.QSqlQuery()
+	query_object.prepare("SELECT * FROM Bejegyzes")
+	query_object.addBindValue(lekerdezes)
+	query_object.exec_()
+	return model, lekerdezes
 
 # def computeHash(original):
 #    return QCryptographicHash.hash(QString(original).toUtf8(), QCryptographicHash.Md5).toHex()
